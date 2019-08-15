@@ -183,10 +183,32 @@ console.log('addStrings("a","b") = ', addStrings("a","b"));
 
 /*
 
-
-
-
 */
+
+// TASK 12 - REQUIRED HL EXTENSION (optional for SL)
+
+/* You can use the 'typeof' command in javascript / TypeScript to check what type of data you have.
+ * For example the command `typeof 3` would return the string "number" while the command `typeof "joe"` 
+ * would return the string "string".
+ * 
+ * Example usage: if (typeof bob == "number") { console.log("bob is a number")}
+ * 
+ * The function below allows an input variable, `input` to be a number OR a string (that's what the `|` symbol does).
+ * It also may output either a string or a number.
+ * 
+ * Modify the function so that it checks the type of the input. If the type is a number, return the value of the input times 8. 
+ * If the type is a string, return the string concatenated (added to) itself.
+ * 
+ * EXAMPLES:
+ * IF the input is 3, the output should be 24.
+ * If the input is -2, the output should be -6.
+ * IF the input is "bob" the output should be "bobbob".
+ */
+
+function typeChecker(input: string | number): string | number {
+
+    return 0;
+}
 
 
 //ignore but don't remove...
