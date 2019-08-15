@@ -38,7 +38,7 @@ let var1:string= addNumbers(2,8.9);
  * are doing what you expect. Since USERS don't see the debug console, usually, it's like a private way to 
  * give messages to yourself when the program runs.
  *
- * TASK 2. Complete the sentence
+ * TASK 3. Complete the sentence
  * I predict the line below will print ___________________
  */
 console.log('The value of var1 is ' + var1);
@@ -48,7 +48,7 @@ console.log('The value of var1 is ' + var1);
 //-----------------WORKING WITH NUMBERS-------------------//
 
 /*
- * TASK 3 - uncomment the function below by selecting it and pressing CTRL+\ or CMD+\,
+ * TASK 4 - uncomment the function below by selecting it and pressing CTRL+\ or CMD+\,
  *  then complete the function below so that it takes two numeric parameters
  * and returns the difference (second - first). Model it after addNumbers.
  */
@@ -61,14 +61,14 @@ function subtractNumbers() {
 // If subtractNumbers always returns a number, TypeScript will *infer* that var2 is a number too.
 let var2= subtractNumbers(2, 8);
 
-// TASK 4. Complete the sentence.
+// TASK 5. Complete the sentence.
 // If subtractNumbers works, var2 should equal ___________
 
 
 /* The if statement below is called a `unit test` - it checks whether one function is doing
  * what we want. A good unit test would check more than one input, but this is a start.
  *
- * TASK 5 - complete the unit test, replacing the 0 with the value you predicted above.
+ * TASK 6 - complete the unit test, replacing the 0 with the value you predicted above.
  */
 if (var2 == 0) {
     console.log("Test 1 passed: subtractNumbers function did good!")
@@ -76,7 +76,7 @@ if (var2 == 0) {
     console.log("Test 1 failed: something's wrong with subtractNumbers...");
 }
 
-/* TASK 6 - Write a function named `multDiv` below that takes three parameters (you choose the names!)
+/* TASK 7 - Write a function named `multDiv` below that takes three parameters (you choose the names!)
  *  and returns the value of the first one times the second one divided by the third one.
  *  To multiply, use an asterisk, `*`, and to divide use a slash, `/`.
  */
@@ -111,10 +111,10 @@ function twoEqual(a:number,b:number):boolean {
     return (a == b);
 }
 
-//  TASK 6 - fix the variable type below.
+//  TASK 8 - fix the variable type below.
 let b1:number = twoEqual(3, 3);
 
-// TASK 7 - complete the function below. It should take two numbers and return true
+// TASK 9 - complete the function below. It should take two numbers and return true
 // if the first one is greater than the second one, and false otherwise.
 function firstGreater() {
 
@@ -144,7 +144,7 @@ if ( b2 ) {
  */
 
 
- // TASK 8 - change the VALUES below, not the types, to make these assignments work.
+ // TASK 10 - change the VALUES below, not the types, to make these assignments work.
 
  let twentyThree1:string = 23;
 
@@ -154,7 +154,7 @@ if ( b2 ) {
 
 let twentyThree3:number = parseInt("23");
 
-// TASK 9 - Predict the outputs of the following three outputs.
+// TASK 11 - Predict the outputs of the following three outputs.
 console.log("First", twentyThree1 + 2);
 // The output will be...
 
@@ -170,12 +170,12 @@ function addStrings(a:string, b:string) {
     return a + b;
 }
 
-// TASK 10 - Predict
-// What will addStrings("a", "b") return
+// TASK 12 - Predict
+// What will addStrings("a", "b") return?
 // 
 console.log('addStrings("a","b") = ', addStrings("a","b"));
 
-// TASK 11 - Build and test!
+// TASK 13 - Build and test!
 // At this point, you should hopefully have solved all of the errors and written all
 // of your functions. Go ahead a build (Ctrl-Shift-B or Cmd-Shift-B, choose 'tsc:build')
 // then debug with node (press F5 and choose 'NodeJS') and look at the output in the debug console. 
@@ -185,13 +185,16 @@ console.log('addStrings("a","b") = ', addStrings("a","b"));
 
 */
 
-// TASK 12 - REQUIRED HL EXTENSION (optional for SL)
+// TASK 14 - REQUIRED HL EXTENSION (optional for SL)
 
 /* You can use the 'typeof' command in javascript / TypeScript to check what type of data you have.
  * For example the command `typeof 3` would return the string "number" while the command `typeof "joe"` 
  * would return the string "string".
  * 
- * Example usage: if (typeof bob == "number") { console.log("bob is a number")}
+ * Example usage: 
+ * if (typeof bob == "number") { 
+ *      console.log("bob is a number");
+ * }
  * 
  * The function below allows an input variable, `input` to be a number OR a string (that's what the `|` symbol does).
  * It also may output either a string or a number.
@@ -207,7 +210,21 @@ console.log('addStrings("a","b") = ', addStrings("a","b"));
 
 function typeChecker(input: string | number): string | number {
 
-    return 0;
+    return "complete";
+}
+
+//unit test for typeChecker. If you do the extension, running the code will use this to check it.
+
+if (typeChecker(2) == "complete") {
+    //didn't do this extension, ignore it.
+} else if (typeChecker(3) != 24 || 
+            typeChecker(-2) != -6 ||
+            typeChecker("bob") != "bobbob" || 
+            typeChecker("what's up?") != "what's up?what's up?" ||
+            typeChecker("") != "") {
+    console.log("One or more of the typeChecker checks failed. Fix it!");
+} else {
+    console.log("typeChecker checks passed. Nice job!");
 }
 
 
